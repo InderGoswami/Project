@@ -5,17 +5,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon api/index.js",
-    "start": "node api/index.js",
-<<<<<<< HEAD
-    "build":"npm i && npm install --prefix frontend && npm run build --prefix frontend"
-    
-=======
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
->>>>>>> 3233414eb724b98bd5a75f3a7b1fa5bd26d587e4
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "author": "Inder Goswami",
-  "license": "ISC",
   "dependencies": {
     "axios": "^1.7.9",
     "bcryptjs": "^2.4.3",
