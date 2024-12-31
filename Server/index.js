@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGO)
   });
 
 const app = express();
-const __diranme = path.resolve();
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
 
 
