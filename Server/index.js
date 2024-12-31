@@ -25,11 +25,7 @@ const app = express();
 const __diranme = path.resolve();
 
 
-<<<<<<< HEAD
 
-// Enable CORS for all routes, with credentials allowed
-=======
->>>>>>> 3233414eb724b98bd5a75f3a7b1fa5bd26d587e4
 app.use(cors({
   origin: "http://localhost:5173", // Frontend URL
   credentials: true, // Allow credentials (cookies, etc.)
@@ -47,10 +43,10 @@ const upload = multer({ storage });
 app.use('/api/user', userRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/listing', listingRouter);
-app.use(express.static(path.join(__dirname, '/frontend/dist')));
+app.use(express.static(path.join(__dirname, '/FrontEnd/dist')));
 // Image Upload Route (using multer for file uploads and cloudinary storage)
 app.get('*',(req,res)=>{
-  res.sendFile(path.join(__dirname, 'frontend','dist','index.html'));
+  res.sendFile(path.join(__dirname, 'FrontEnd','dist','index.html'));
 })
 app.post('/api/upload', upload.array('images', 6), async (req, res) => {
   try {
