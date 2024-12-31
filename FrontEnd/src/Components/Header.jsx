@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { FaBars, FaTimes, FaSearch } from 'react-icons/fa';
-import logo from "F:/Projects/PropExchange/FrontEnd/src/assets/PropExchange.png";
+import logo from "/src/assets/PropExchange.png";
 
 const Header = () => {
   const navigate = useNavigate();
