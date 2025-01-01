@@ -22,7 +22,7 @@ mongoose.connect(process.env.MONGO)
   });
 
 const app = express();
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
+const __dirname = path.resolve();
 
 
 
@@ -44,6 +44,7 @@ app.use('/api/user', userRouter);
 app.use('/api/auth', authRouter);
 app.use('/api/listing', listingRouter);
 app.use(express.static(path.join(__dirname, '/FrontEnd/dist')));
+
 // Image Upload Route (using multer for file uploads and cloudinary storage)
 app.get('*',(req,res)=>{
   res.sendFile(path.join(__dirname, 'FrontEnd','dist','index.html'));
